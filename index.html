@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Digital | Teoría de la Programación</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#inicio">Portafolio Digital</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#datos">Datos</a>
+        <a href="#unidad1">Unidad 1</a>
+        <a href="#unidad2">Unidad 2</a>
+        <a href="#galeria">PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Universidad Nacional de Loja</p>
+        <h1>Portafolio de Teoría de la Programación</h1>
+        <p>Exploración de algoritmos, pseudocódigo, diagramas de flujo, lenguaje C, estructuras condicionales y repetitivas.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#unidad1">Ver contenido</a>
+          <a class="btn secondary" href="assets/original/PORTAFOLIO-DEFINITIVO.pdf" target="_blank">Abrir PDF original</a>
+        </div>
+      </div>
+      <div class="cover-card">
+        <img src="assets/images/pagina-01.jpg" alt="Portada del portafolio" />
+      </div>
+    </section>
+
+    <section id="datos" class="section">
+      <h2>Datos generales</h2>
+      <div class="info-grid">
+        <div><strong>Carrera:</strong><span>Ingeniería en Computación</span></div>
+        <div><strong>Asignatura:</strong><span>Teoría de la Programación</span></div>
+        <div><strong>Ciclo:</strong><span>1</span></div>
+        <div><strong>Docente:</strong><span>Lissete Geoconda Lopéz Faican</span></div>
+        <div><strong>Estudiante:</strong><span>Matias Joel Ortega Correa</span></div>
+      </div>
+    </section>
+
+    <section id="unidad1" class="section unit">
+      <div class="section-title">
+        <span>Unidad 1</span>
+        <h2>Exploración y uso de herramientas digitales para pseudocódigo y diagramas de flujo</h2>
+      </div>
+
+      <article class="card">
+        <h3>Algoritmo</h3>
+        <p>Un algoritmo es un conjunto ordenado, finito y definido de instrucciones o reglas paso a paso que permiten solucionar un problema, realizar un cómputo o procesar datos. Funciona recibiendo datos de entrada, procesándolos mediante reglas lógicas y produciendo un resultado final.</p>
+        <p>El algoritmo <strong>calculodegalones</strong> convierte la producción diaria ingresada en litros a galones y calcula el monto total a cobrar según el precio por galón. Para ello, solicita litros y precio, convierte usando el factor 3.785 y multiplica los galones obtenidos por el precio ingresado.</p>
+      </article>
+
+      <div class="two-columns">
+        <article class="card">
+          <h3>Pseudocódigo</h3>
+          <p>El pseudocódigo representa algoritmos usando lenguaje natural y estructuras similares al código, sin depender de reglas estrictas de sintaxis.</p>
+          <pre><code>Algoritmo calculodegalones
+  Definir litros, precioPorGalon Como Real
+  Definir galones, totalACobrar Como Real
+
+  Escribir "Ingrese la producción del día en litros"
+  Leer litros
+  Escribir "Ingrese el precio por galón"
+  Leer precioPorGalon
+
+  galones = litros / 3.785
+  totalACobrar = galones * precioPorGalon
+
+  Escribir "Equivalente en galones: ", galones
+  Escribir "Total a cobrar: $", totalACobrar
+FinAlgoritmo</code></pre>
+        </article>
+        <article class="card image-card">
+          <h3>Diagrama de flujo</h3>
+          <img src="assets/images/pagina-04.jpg" alt="Diagrama de flujo del algoritmo calculodegalones" />
+        </article>
+      </div>
+
+      <article class="card">
+        <h3>Prueba de escritorio</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Paso</th><th>Litros</th><th>Precio por galón</th><th>Galones</th><th>Total a cobrar</th></tr></thead>
+            <tbody>
+              <tr><td>Entrada</td><td>15</td><td>5</td><td>-</td><td>-</td></tr>
+              <tr><td>Conversión</td><td>15</td><td>5</td><td>3.96</td><td>-</td></tr>
+              <tr><td>Cálculo</td><td>15</td><td>5</td><td>3.96</td><td>19.80</td></tr>
+              <tr><td>Entrada</td><td>50</td><td>3.2</td><td>-</td><td>-</td></tr>
+              <tr><td>Conversión</td><td>50</td><td>3.2</td><td>13.21</td><td>-</td></tr>
+              <tr><td>Cálculo</td><td>50</td><td>3.2</td><td>13.21</td><td>42.27</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Ejercicio con estructura secuencial en C</h3>
+        <p><strong>Problema:</strong> desarrollar un programa en lenguaje C que permita ingresar la base y la altura de un rectángulo, y calcule su área.</p>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><th>Entrada</th><td>Base y altura</td></tr>
+              <tr><th>Proceso</th><td>Área = base × altura</td></tr>
+              <tr><th>Salida</th><td>Área del rectángulo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  float base, altura, area;
+
+  printf("Ingrese la base: ");
+  scanf("%f", &base);
+
+  printf("Ingrese la altura: ");
+  scanf("%f", &altura);
+
+  area = base * altura;
+  printf("El área del rectángulo es: %.2f", area);
+
+  return 0;
+}</code></pre>
+      </article>
+    </section>
+
+    <section id="unidad2" class="section unit alt">
+      <div class="section-title">
+        <span>Unidad 2</span>
+        <h2>Aplicación de estructuras condicionales y repetitivas en el diseño</h2>
+      </div>
+
+      <article class="card">
+        <h3>Estructuras condicionales</h3>
+        <p>Permiten que un programa tome decisiones según una condición. El programa evalúa si una expresión es verdadera o falsa y ejecuta una acción de acuerdo con el resultado.</p>
+        <div class="concept-grid">
+          <div><h4>Condicional simple</h4><code>Si condición Entonces<br> Acción<br>FinSi</code></div>
+          <div><h4>Condicional doble</h4><code>Si condición Entonces<br> Acción 1<br>Sino<br> Acción 2<br>FinSi</code></div>
+          <div><h4>Condicional múltiple</h4><code>Según variable Hacer<br> Caso 1: Acción 1<br> Caso 2: Acción 2<br> De Otro Modo: Acción 3<br>FinSegún</code></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Estructuras repetitivas</h3>
+        <p>Permiten ejecutar instrucciones varias veces mientras se cumpla una condición o hasta completar un número determinado de repeticiones.</p>
+        <div class="concept-grid">
+          <div><h4>Mientras</h4><code>Mientras condición Hacer<br> Instrucciones<br>FinMientras</code></div>
+          <div><h4>Repetir...Hasta Que</h4><code>Repetir<br> Instrucciones<br>Hasta Que condición</code></div>
+          <div><h4>Para</h4><code>Para contador &lt;- inicio Hasta fin Hacer<br> Instrucciones<br>FinPara</code></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Ejercicio: control de ventas en una tienda</h3>
+        <p>Se desea crear un programa que permita ingresar la cantidad de productos vendidos. Por cada producto se ingresa su precio. Si el precio es menor o igual a 0, el programa muestra un mensaje de error y vuelve a pedir el dato. Al final calcula el total, aplica 10% de descuento si supera los $100 y muestra el total final.</p>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr><th>Entrada</th><td>Cantidad de productos vendidos y precio de cada producto.</td></tr>
+              <tr><th>Proceso</th><td>Validar cantidad, validar precios, acumular total, verificar descuento y calcular total final.</td></tr>
+              <tr><th>Salida</th><td>Total de venta, descuento aplicado y total final a pagar.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <div class="two-columns">
+        <article class="card image-card">
+          <h3>Diagrama de flujo del ejercicio</h3>
+          <img src="assets/images/pagina-17.jpg" alt="Diagrama de flujo de control de ventas" />
+        </article>
+        <article class="card">
+          <h3>Código en C</h3>
+          <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  int cantidadProductos, i;
+  float precio, total = 0;
+  float descuento, totalFinal;
+
+  do {
+    printf("Ingrese la cantidad de productos vendidos: ");
+    scanf("%d", &cantidadProductos);
+    if (cantidadProductos &lt;= 0) {
+      printf("Ingrese una cantidad mayor que 0\n");
+    }
+  } while (cantidadProductos &lt;= 0);
+
+  for (i = 1; i &lt;= cantidadProductos; i++) {
+    do {
+      printf("Ingrese el precio del producto #%d: ", i);
+      scanf("%f", &precio);
+      if (precio &lt;= 0) {
+        printf("Ingrese un precio válido\n");
+      }
+    } while (precio &lt;= 0);
+    total = total + precio;
+  }
+
+  if (total &gt; 100) descuento = total * 0.10;
+  else descuento = 0;
+
+  totalFinal = total - descuento;
+  printf("Total sin descuento: $%.2f\n", total);
+  printf("Descuento aplicado: $%.2f\n", descuento);
+  printf("Total a pagar: $%.2f\n", totalFinal);
+
+  return 0;
+}</code></pre>
+        </article>
+      </div>
+
+      <article class="card">
+        <h3>Validación</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Paso</th><th>Dato ingresado</th><th>Validación</th><th>Total acumulado</th></tr></thead>
+            <tbody>
+              <tr><td>Cantidad de productos</td><td>3</td><td>Válido</td><td>0</td></tr>
+              <tr><td>Producto #1</td><td>40</td><td>Válido</td><td>40</td></tr>
+              <tr><td>Producto #2</td><td>-10</td><td>Inválido, vuelve a pedir</td><td>40</td></tr>
+              <tr><td>Producto #2</td><td>35</td><td>Válido</td><td>75</td></tr>
+              <tr><td>Producto #3</td><td>50</td><td>Válido</td><td>125</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Total de venta:</strong> $125.00 | <strong>Descuento:</strong> $12.50 | <strong>Total a pagar:</strong> $112.50</p>
+      </article>
+    </section>
+
+    <section id="galeria" class="section">
+      <h2>Vista del PDF original</h2>
+      <p>Se conserva una galería con las páginas originales como respaldo visual del documento.</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portafolio Digital - Teoría de la Programación</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
